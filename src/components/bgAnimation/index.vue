@@ -25,7 +25,7 @@ export default {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: rgba(0, 134, 179, .5);
+  background: rgba(0,0,0,1);
   top: 0;
   left: 0;
   z-index: 0;
@@ -49,10 +49,10 @@ export default {
     animation: imgAnimation 48s linear infinite 0s;
 
     &:nth-child(1) {
-      background-image: url(../../assets/img/bg-4.jpg);
+      background-image: url(https://gd-hbimg.huaban.com/4b18925b0a4be21d35dc64eb1401a9f58a4f9ab2b888a-9mlKLy_fw658webp);
     }
     &:nth-child(2) {
-      background-image: url(../../assets/img/bg-5.jpg);
+      background-image: url(https://gd-hbimg.huaban.com/338dec860db6a29b4a040083bd98dc6d2eabc2341e400d-6298ov_fw658webp);
       -webkit-animation-delay: 12s;
       -moz-animation-delay: 12s;
       -o-animation-delay: 12s;
@@ -60,7 +60,7 @@ export default {
       animation-delay: 12s;
     }
     &:nth-child(3) {
-      background-image: url(../../assets/img/bg-2.jpg);
+      background-image: url(https://gd-hbimg.huaban.com/df96f56f2184c854719ef51cde57d2abfd6d3e244f42c-XrcCrA_fw658webp);
       -webkit-animation-delay: 24s;
       -moz-animation-delay: 24s;
       -o-animation-delay: 24s;
@@ -68,7 +68,7 @@ export default {
       animation-delay: 24s;
     }
     &:nth-child(4) {
-      background-image: url(../../assets/img/bg-4.jpg);
+      background-image: url(https://gd-hbimg.huaban.com/c1ada503722da828ffd8470578a455271352a683b527e-UPzneM_fw658webp);
       animation-delay: 36s;
     }
   }

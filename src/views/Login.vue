@@ -9,7 +9,7 @@
 		<div class="layer">
 			<div class="some-space">
 				<div class="form">
-					<h2>大数据可视化平台</h2>
+					<h2>红色党建智慧驾驶舱</h2>
 					<div class="item">
 						<i class="iconfont icon-user"></i>
 						<input autocomplete="off" type="text" class="input" v-model="userName" placeholder="请输入用户名" />
@@ -29,13 +29,31 @@
 			</div>
 		</div>
 
+		<!-- 
+			color：粒子的颜色
+			particleOpacity：粒子的不透明度
+			particlesNumber：粒子的数量
+			shapeType: 粒子的形状
+			"circle"（圆形）、"edge"（边缘形）、"triangle"（三角形）、"polygon"（多边形）、"star"（星星）
+			particleSize : 粒子的大小
+			linesColor : 粒子连线的颜色
+			linesWidth：粒子连线的宽度
+			lineLinked : 粒子连线是否可交互
+			lineOpacity : 粒子连线的不透明度
+			linesDistance : 粒子连线的距离
+			moveSpeed : 粒子移动的速度
+			hoverEffect : 粒子是否可交互
+			hoverMode : 粒子交互的模式
+			clickEffect : 粒子是否可点击
+			clickMode : 粒子点击的模式
+		 -->
 		<vue-particles 
 			color="#6495ED" 
-			:particleOpacity="0.7" 
+			:particleOpacity="0.8" 
 			:particlesNumber="80" 
 			shapeType="circle" 
 			:particleSize="4"
-			linesColor="#6495ED" 
+			linesColor="#3B7EF7" 
 			:linesWidth="1" 
 			:lineLinked="true" 
 			:lineOpacity="0.6" 
