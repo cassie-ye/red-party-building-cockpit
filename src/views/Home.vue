@@ -5,57 +5,22 @@
 -->
 
 <template>
-  <div class="home-container">
-    <div class="wrap" ref="editor">
-      <div class="title_wrap">
-        <div class="zuojuxing"></div>
-        <div class="youjuxing"></div>
-        <div class="guang"></div>
-        <div class="title">
-          <span class="title-text">红色党建智慧驾驶舱</span>
-        </div>
-        <!-- <div class="timers">
+  <v-scale-screen width="1920" height="1080">
+    <div class="title_wrap">
+      <div class="zuojuxing"></div>
+      <div class="youjuxing"></div>
+      <div class="guang"></div>
+      <div class="title">
+        <span class="title-text">红色党建智慧驾驶舱</span>
+      </div>
+      <!-- <div class="timers">
           {{ dateYear }} {{ dateWeek }} {{ dateDay }}
           <i class="blq-icon-shezhi02" style="margin-left: 10px" @click="showSetting"></i>
         </div> -->
-      </div>
-      <china />
-
-      <!-- <sinan />
-      <seamless />
-      <pyramid />
-
-      <scrollArc />
-      <szBar />
-
-      <ringPin />
-      <rotateColorful />
-      <circleRunway />
-      <scanRadius />
-
-      <cakeLinkage />
-      <pyramidTrend />
-      <dynamicLine />
-
-      <staffMix />
-      <flashCloud />
-      <ringPie />
-      <colorfulRadar />
-
-      <dynamicList />
-      <bar3d />
-      <colorfulArea />
-
-      <rainbow />
-      <gauge />
-      <waterPolo />
-      <circleNesting />
-
-      <div class="divider"></div> -->
-
     </div>
+    <china />
+  </v-scale-screen>
 
-  </div>
 </template>
 
 <script>

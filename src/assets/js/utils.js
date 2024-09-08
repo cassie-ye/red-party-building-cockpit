@@ -6,7 +6,7 @@ export function screenSize(editorDom) {
   let defHeight = 1080;
   let xScale = screenWidth / defWidth;
   let yScale = screenHeight / defHeight;
-  editorDom.style.cssText += ';transform: scale(' + xScale + ',' + yScale + ')';
+  // editorDom.style.cssText += ';transform: scale(' + xScale + ',' + yScale + ')';
 
   $(window).resize(() => {
     let screenWidth = document.body.clientWidth || document.documentElement.clientWidth;

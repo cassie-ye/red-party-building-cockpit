@@ -6,6 +6,7 @@ import vueParticles from 'vue-particles'
 import Vcomp from './components/index'
 import Toast from './components/toast'
 import * as echarts from 'echarts';
+import VScaleScreen from 'v-scale-screen'
 
 import '@/assets/styles/base.scss'
 import '@/assets/styles/common.scss'
@@ -13,7 +14,7 @@ import '@/assets/iconfont/iconfont.css'
 
 Vue.use(vueParticles)
 Vue.use(Vcomp)
-
+Vue.use(VScaleScreen)
 Vue.config.productionTip = false
 
 Vue.prototype.$Toast = Toast
