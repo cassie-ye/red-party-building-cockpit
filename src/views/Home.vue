@@ -7,20 +7,20 @@
 <template>
   <div class="home-container">
     <div class="wrap" ref="editor">
-      <div class="d-flex jc-center title_wrap">
+      <div class="title_wrap">
         <div class="zuojuxing"></div>
         <div class="youjuxing"></div>
         <div class="guang"></div>
-        <div class="d-flex jc-center">
-          <div class="title">
-            <span class="title-text">红色党建智慧驾驶舱</span>
-          </div>
+        <div class="title">
+          <span class="title-text">红色党建智慧驾驶舱</span>
         </div>
-        <div class="timers">
+        <!-- <div class="timers">
           {{ dateYear }} {{ dateWeek }} {{ dateDay }}
           <i class="blq-icon-shezhi02" style="margin-left: 10px" @click="showSetting"></i>
-        </div>
+        </div> -->
       </div>
+      <china />
+
       <!-- <sinan />
       <seamless />
       <pyramid />

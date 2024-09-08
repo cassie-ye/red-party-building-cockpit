@@ -5,6 +5,7 @@ import store from './store'
 import vueParticles from 'vue-particles'
 import Vcomp from './components/index'
 import Toast from './components/toast'
+import * as echarts from 'echarts';
 
 import '@/assets/styles/base.scss'
 import '@/assets/styles/common.scss'
@@ -16,7 +17,7 @@ Vue.use(Vcomp)
 Vue.config.productionTip = false
 
 Vue.prototype.$Toast = Toast
-
+Vue.prototype.$echarts = echarts
 
 router.beforeEach((to, from, next) => {
 	if (to.meta.title) {

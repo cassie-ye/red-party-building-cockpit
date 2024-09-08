@@ -37,7 +37,10 @@ import wordCloud from './companySummary/wordCloud' // 产品热词
 import distribution from './companySummary/distribution' // 客户分布
 import history from './companySummary/history' // 发展历程
 
+import china from './china' // 中国地图
+
 const components = {
+  china,
   bgAnimation,
   modal,
   sinan,
