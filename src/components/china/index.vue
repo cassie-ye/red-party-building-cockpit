@@ -295,14 +295,13 @@ export default {
             // 4. 显示地图
             this.myChart.setOption(option); // 用 option 和 option2 效果一样
         },
-
         getData(code) {
             console.log('点击的省份的code', code)
             const jiangsuGeoJson = chinamap.features.find(feature => feature.properties.adcode === 320000);
             console.log('jiangsuGeoJson', jiangsuGeoJson)
-            this.$echarts.registerMap('jiangsu', jiangsuGeoJson);
+            this.$echarts.registerMap('zhejiang', zhejiang);
             console.log("-----")
-            this.init('jiangsu', [{ name: 'Nanjing', value: 100 }], [{ name: 'Nanjing', value: 100 }]);
+            this.init('zhejiang', [{ name: 'hangzhou', value: 100 }], [{ name: 'Nanjing', value: 100 }]);
             console.log("=======")
 
             // fetch("/province.json")
