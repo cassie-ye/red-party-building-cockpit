@@ -9,7 +9,6 @@
 
 <script>
 import chinamap from "../../utils/map/china.json";
-import zhejiang from "../../utils/map/zhejiang.json";
 import xzqCode from "../../utils/map/xzqCode";
 
 export default {
@@ -54,7 +53,8 @@ export default {
                 }
             ],
             code: "china",
-            echartBindClick: false
+            echartBindClick: false,
+            cityAreaAdcode: "",
         };
     },
     mounted() {
@@ -71,7 +71,7 @@ export default {
         });
         // 城市中心
         console.log(this.cityCenter)
-        // 注册时间
+        // 注册事件
         this.mapclick()
 
     },
@@ -295,14 +295,22 @@ export default {
             // 4. 显示地图
             this.myChart.setOption(option); // 用 option 和 option2 效果一样
         },
-        getData(code) {
-            console.log('点击的省份的code', code)
-            const jiangsuGeoJson = chinamap.features.find(feature => feature.properties.adcode === 320000);
-            console.log('jiangsuGeoJson', jiangsuGeoJson)
-            this.$echarts.registerMap('zhejiang', zhejiang);
-            console.log("-----")
-            this.init('zhejiang', [{ name: 'hangzhou', value: 100 }], [{ name: 'Nanjing', value: 100 }]);
-            console.log("=======")
+        getData(province) {
+            console.log('点击的province', province)
+            // const clickFeature = chinamap.features.find(feature => feature.properties.adcode === 320000);
+            // console.log('clickFeature', clickFeature)
+            const clickProvinceName = province.name
+            const clickProvinceCode = province.adcode
+            fetch(`/geoJsonColl/province/${clickProvinceCode}.json`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data)
+                    this.$echarts.registerMap(clickProvinceName, data);
+                    this.init(clickProvinceName, [{ name: 'hangzhou', value: 100 }], [{ name: 'Nanjing', value: 100 }]);
+                })
+            // console.log("-----")
+            // this.init('zhejiang', [{ name: 'hangzhou', value: 100 }], [{ name: 'Nanjing', value: 100 }]);
+            // console.log("=======")
 
             // fetch("/province.json")
             //     .then(response => response.json())
@@ -337,9 +345,10 @@ export default {
             if (this.echartBindClick) return;
             //单击切换到级地图，当mapCode有值,说明可以切换到下级地图
             this.myChart.on("click", (params) => {
-                // console.log(params);
+                console.log('params', params);
                 let xzqData = xzqCode[params.name];
                 console.log('xzqData', xzqData)
+                this.getCityAreaAdcode()
                 if (xzqData) {
                     // "650000"
                     this.getData(xzqData);
@@ -351,6 +360,20 @@ export default {
             this.echartBindClick = true;
         },
 
+        getCityAreaAdcode(areaName) {
+            fetch("/city.json")
+                .then(response => response.json())
+                .then(data => {
+                    console.log("sss", data)
+                    data.features.map((item) => {
+                        if (item.properties.name == areaName) {
+                            this.cityAreaAdcode = item.properties.adcode
+                            console.log("cityAreaAdcode", this.cityAreaAdcode)
+                        }
+                    })
+                })
+                .catch(error => console.error('加载 cityAreaAdcode.json 时出错:', error));
+        }
     },
 };
 </script>
