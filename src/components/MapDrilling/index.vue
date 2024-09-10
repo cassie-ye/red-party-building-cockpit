@@ -344,7 +344,7 @@ export default {
                         type: 'map',
                         map: mapName, // 同 registerMap 方法的第一个参数一致
                         data: seriesData,
-                        zoom: 1.3, // 当前视角的缩放比例
+                        zoom: 1, // 当前视角的缩放比例
                         zlevel: 1, // 用于 Canvas 分层，不同zlevel值的图形会放置在不同的 Canvas 中
                         geoIndex: 1,
                         selectedMode: false, //是否允许选中多个区域
@@ -452,15 +452,12 @@ export default {
 </script>
 <style scoped>
 .mapdrilling-inner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+
 }
 
 .chart {
-    width: 900px;
-    height: 900px;
+    width: 800px;
+    height: 740px;
+    background-color: pink;
 }
 </style>
