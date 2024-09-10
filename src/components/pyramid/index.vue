@@ -150,7 +150,7 @@ export default {
 <style lang="scss" scoped>
 .dv-border-box-12{
   width: 750px;
-  height: 610px;
+  height: 560px;
   margin-left: -30px;
 
   .moudle-desc {
@@ -169,7 +169,7 @@ export default {
 }
 .trigle {
   // left: 600px;
-  top: 70px;
+  top: 55px;
   width: 720px;
   height: 500px;
 

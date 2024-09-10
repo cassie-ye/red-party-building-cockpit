@@ -26,6 +26,10 @@
       </div>
       <div>
         <pyramid></pyramid>
+        <cakeLinkage></cakeLinkage>
+      </div>
+      <div>
+        <staffMix></staffMix>
       </div>
     </div>
   </v-scale-screen>
