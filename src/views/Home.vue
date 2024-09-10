@@ -18,7 +18,8 @@
           <i class="blq-icon-shezhi02" style="margin-left: 10px" @click="showSetting"></i>
         </div> -->
     </div>
-    <china />
+    <!-- <china /> -->
+    <MapDrilling></MapDrilling>
   </v-scale-screen>
 
 </template>
