@@ -12,9 +12,13 @@ import '@/assets/styles/base.scss'
 import '@/assets/styles/common.scss'
 import '@/assets/iconfont/iconfont.css'
 
+import dataV from '@jiaminghi/data-view'
+
 Vue.use(vueParticles)
 Vue.use(Vcomp)
 Vue.use(VScaleScreen)
+Vue.use(dataV)
+
 Vue.config.productionTip = false
 
 Vue.prototype.$Toast = Toast

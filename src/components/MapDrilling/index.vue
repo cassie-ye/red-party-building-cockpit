@@ -1,7 +1,9 @@
 <template>
-    <div class="mapdrilling-inner">
-        <div id="chart" class="chart"></div>
-    </div>
+    <dv-border-box-1>
+        <div class="mapdrilling-inner">
+            <div id="chart" class="chart"></div>
+        </div>
+    </dv-border-box-1>
 </template>
 <script>
 import * as echarts from 'echarts'
@@ -278,7 +280,7 @@ export default {
                 geoJson,
             })
         },
-        
+
         /**
          * @description: 绘制地图
          * @param {String} mapName 地图名称 同注册地图方法registerMap 的第一个参数一致
@@ -451,13 +453,10 @@ export default {
 }
 </script>
 <style scoped>
-.mapdrilling-inner {
-
-}
+.mapdrilling-inner {}
 
 .chart {
     width: 800px;
     height: 740px;
-    background-color: pink;
 }
 </style>
