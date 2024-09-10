@@ -19,7 +19,15 @@
         </div> -->
     </div>
     <!-- <china /> -->
-    <MapDrilling></MapDrilling>
+    <div class="content_wrap">
+      <div style="width: 41%; height: 100%">
+        <dataCount></dataCount>
+        <MapDrilling></MapDrilling>
+      </div>
+      <div>
+        <pyramid></pyramid>
+      </div>
+    </div>
   </v-scale-screen>
 
 </template>
@@ -50,6 +58,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.content_wrap {
+  display: flex;
+}
+
 .home-container {
   position: absolute;
   left: 0;

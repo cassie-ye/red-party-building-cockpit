@@ -1,9 +1,11 @@
 <template>
-    <div class="mapdrilling-inner">
-        <dv-border-box-12>
-            <div id="chart" class="chart"></div>
-        </dv-border-box-12>
-    </div>
+    <dv-border-box-12>
+        <div class="moudle-desc">
+            <p class="moudle-title">红色基地地理分布</p>
+            <dv-decoration-3 style="width:250px;height:30px;" />
+        </div>
+        <div id="chart" class="chart"></div>
+    </dv-border-box-12>
 </template>
 <script>
 import * as echarts from 'echarts'
@@ -291,6 +293,10 @@ export default {
             const seriesData = this.getSeriesDataByPart(partData, geoJson)
             console.log("seriesData", seriesData)
             const option = {
+                animation: true,
+                animationDuration: 1000,
+                animationDurationUpdate: 600,
+                animationEasingUpdate: 'cubicInOut',
                 title: {
                     // 主标题
                     text: mapName,
@@ -298,13 +304,13 @@ export default {
                         color: '#b7def9',
                         fontSize: 18,
                     },
-                    left: 20,
+                    left: 10,
                     top: 20,
                     // 副标题
                     subtext: `${mapName}共入驻567个红色基地`,
                     subtextStyle: {
-                        color: "#0180fb",
-                        fontSize: 18,
+                        color: "#fac11c",
+                        fontSize: 16,
                     },
                 },
                 tooltip: {
@@ -314,7 +320,7 @@ export default {
                 },
                 // 视觉映射
                 visualMap: {
-                    left: 20,
+                    left: 10,
                     bottom: 130,
                     pieces: [
                         { gte: 51, label: "51-60个" },
@@ -417,13 +423,8 @@ export default {
                             shadowOffsetY: 2,
                             shadowBlur: 10,
                         },
-
                     },
                 ],
-                animation: true,
-                animationDuration: 1000,
-                animationDurationUpdate: 600,
-                animationEasingUpdate: 'cubicInOut',
             }
             // 绘制图表
             this.mapChart.setOption(option)
@@ -452,13 +453,30 @@ export default {
     },
 }
 </script>
-<style scoped>
+<style scoped lang="scss">
 .chart {
-    width: 800px;
-    height: 740px;
+    width: 750px;
+    height: 680px;
 }
 
 .dv-border-box-12 {
-    width: 50%;
+    .moudle-desc {
+        width: 80%;
+        display: flex;
+        color: #017ef7;
+        padding-top: 15px;
+        align-items: center;
+
+        .moudle-title {
+            font-size: 20px;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+    }
+    width: 120%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 </style>

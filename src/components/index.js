@@ -39,6 +39,7 @@ import history from './companySummary/history' // 发展历程
 
 import china from './china' // 中国地图
 import MapDrilling from './MapDrilling'
+import dataCount from './dataCount'
 
 const components = {
   china,
@@ -74,7 +75,9 @@ const components = {
   wordCloud,
   distribution,
   history,
-  MapDrilling
+  MapDrilling,
+
+  dataCount
 };
 
 const install = (Vue = {}) => {
