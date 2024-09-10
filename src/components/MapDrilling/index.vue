@@ -1,9 +1,9 @@
 <template>
-    <dv-border-box-1>
-        <div class="mapdrilling-inner">
+    <div class="mapdrilling-inner">
+        <dv-border-box-12>
             <div id="chart" class="chart"></div>
-        </div>
-    </dv-border-box-1>
+        </dv-border-box-12>
+    </div>
 </template>
 <script>
 import * as echarts from 'echarts'
@@ -290,7 +290,6 @@ export default {
         renderMap(mapName, partData, geoJson) {
             const seriesData = this.getSeriesDataByPart(partData, geoJson)
             console.log("seriesData", seriesData)
-            const visualMapMax = this.getVisualMapMax(seriesData)
             const option = {
                 title: {
                     // 主标题
@@ -299,13 +298,14 @@ export default {
                         color: '#b7def9',
                         fontSize: 18,
                     },
+                    left: 20,
+                    top: 20,
                     // 副标题
-                    subtext: '全国共入驻567个红色基地',
+                    subtext: `${mapName}共入驻567个红色基地`,
                     subtextStyle: {
                         color: "#0180fb",
                         fontSize: 18,
                     },
-
                 },
                 tooltip: {
                     trigger: 'item',
@@ -314,7 +314,7 @@ export default {
                 },
                 // 视觉映射
                 visualMap: {
-                    left: 0,
+                    left: 20,
                     bottom: 130,
                     pieces: [
                         { gte: 51, label: "51-60个" },
@@ -453,10 +453,12 @@ export default {
 }
 </script>
 <style scoped>
-.mapdrilling-inner {}
-
 .chart {
     width: 800px;
     height: 740px;
+}
+
+.dv-border-box-12 {
+    width: 50%;
 }
 </style>
