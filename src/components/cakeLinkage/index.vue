@@ -7,7 +7,7 @@
 <template>
   <dv-border-box-12>
     <div class="moudle-desc">
-      <p class="moudle-title">红色基地层级展示</p>
+      <p class="moudle-title">近半年平台净利润动态展示</p>
       <dv-decoration-3 style="width:250px;height:30px;" />
     </div>
     <div class="sn1-container">
@@ -121,7 +121,7 @@ export default {
             axisType: 'category',
             autoPlay: true,
             playInterval: 2000,
-            data: ['2024-04', '2024-05', '2024-06', '2024-07', '2024-08'],
+            data: ['2024-04', '2024-05', '2024-06', '2024-07', '2024-08','2024-09'],
             lineStyle: {
               color: '#179bf1'
             },

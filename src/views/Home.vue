@@ -30,6 +30,7 @@
       </div>
       <div>
         <staffMix></staffMix>
+        <scrollBoard></scrollBoard>
       </div>
     </div>
   </v-scale-screen>

@@ -40,6 +40,7 @@ import history from './companySummary/history' // 发展历程
 import china from './china' // 中国地图
 import MapDrilling from './MapDrilling'
 import dataCount from './dataCount'
+import scrollBoard from './scrollBoard'
 
 const components = {
   china,
@@ -77,7 +78,8 @@ const components = {
   history,
   MapDrilling,
 
-  dataCount
+  dataCount,
+  scrollBoard
 };
 
 const install = (Vue = {}) => {
