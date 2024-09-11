@@ -129,9 +129,9 @@ export default {
             right: 30,
             label: {
               color: '#2867a8',
-              formatter(s) {
-                return (new Date(s)).getFullYear();
-              }
+              // formatter(s) {
+              //   return (new Date(s)).getMonth()+1;
+              // }
             },
             checkpointStyle: {
               color: '#01d8ff',

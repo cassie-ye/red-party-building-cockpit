@@ -53,13 +53,22 @@
 
             <div class="svgs">
               <div class="text" :class="`per${index + 1}`" v-for="(item, index) in arrData" :key="index">
-                <span>{{ item.name }}</span>
-                <span>{{ item.number }}</span>人
+                <span style="font-size: 18px;"  :style="{ color: index < 4 ? 'yellow' : 'white' }" >{{ item.name }}</span>
+                <span style="font-size: 18px;" :style="{ color: index < 4 ? '#FF3976' : '#5cffff' }">{{ item.number }}</span>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <div class="user-category">
+      <p class="yellow">Ⅰ类：县处级以上党政领导干部</p>
+      <p class="yellow">Ⅱ类：四级调研员及相当层次职级以上公务员</p>
+      <p class="yellow">Ⅲ类：国有企业相当职务层次以上领导人员</p>
+      <p class="yellow">Ⅳ类：事业单位六级管理岗位（职员）以上人员</p>
+      <p>Ⅴ类：乡科级党政领导干部</p>
+      <p>Ⅵ类：一级主任科员及相当层次职级以下公务员</p>
+      <p>Ⅶ类：国有企事业单位其他管理人员、专业技术人员</p>
     </div>
   </dv-border-box-12>
 
@@ -71,26 +80,26 @@ export default {
   data() {
     return {
       arrData: [{
-        name: '前端工程师',
-        number: 3
+        name: 'Ⅰ类',
+        number: "5%"
       }, {
-        name: '后端工程师',
-        number: 5
+        name: 'Ⅱ类',
+        number: "5%"
       }, {
-        name: '网页设计师',
-        number: 2
+        name: 'Ⅲ类',
+        number: "5%"
       }, {
-        name: '测试工程师',
-        number: 2
+        name: 'Ⅳ类',
+        number: "5%"
       }, {
-        name: '产品经理',
-        number: 1
+        name: 'Ⅴ类',
+        number: "5%"
       }, {
-        name: '安卓工程师',
-        number: 1
+        name: 'Ⅵ类',
+        number: "5%"
       }, {
-        name: 'IOS工程师',
-        number: 1
+        name: 'Ⅶ类',
+        number: "5%"
       }]
 
     }
@@ -110,7 +119,7 @@ export default {
 <style lang="scss" scoped>
 .dv-border-box-12 {
   width: 410px;
-  height: 425px;
+  height: 560px;
 
   .moudle-desc {
     width: 80%;
@@ -129,8 +138,9 @@ export default {
 
 .sn-container1 {
   width: 432px;
-  height: 400px;
+  height: 380px;
 
+  // background-color: #fff;
   .person {
     position: absolute;
     top: 0;
@@ -258,6 +268,25 @@ export default {
 
   100% {
     transform: rotateX(-64deg) rotateZ(0deg);
+  }
+}
+
+.user-category {
+  color: aliceblue;
+  width: 100%;
+  position: absolute;
+  top: 360px;
+  font-size: 17px;
+  left: 0px;
+  line-height: 23px;
+
+  .yellow {
+    color: rgb(255, 213, 0);
+  }
+
+  p {
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 </style>
