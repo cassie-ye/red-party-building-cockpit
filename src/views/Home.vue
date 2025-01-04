@@ -20,7 +20,7 @@
     </div>
     <!-- <china /> -->
     <div class="content_wrap">
-      <div style="width: 41%; height: 100%">
+      <div style="width: 30%;margin-right: 7.5%; height: 100%">
         <dataCount></dataCount>
         <MapDrilling></MapDrilling>
       </div>

@@ -114,12 +114,13 @@ export default {
                     inRange: {
                         // 渐变颜色，从小到大
                         color: [
-                            "#c3d7df",
+                            // "#c3d7df",
                             "#5cb3cc",
                             "#8abcd1",
                             "#66a9c9",
                             "#2f90b9",
                             "#1781b5",
+                            "#028ffb"
                         ],
                     },
                     textStyle: {

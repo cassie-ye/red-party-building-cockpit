@@ -197,7 +197,8 @@ export default {
           }],
           yAxis: [{
             type: 'value',
-            name: '区块链应用（个）',
+            // name: '区块链应用（个）',
+            name: '利润(万元)',
             splitLine: {
               show: false
             },

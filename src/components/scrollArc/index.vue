@@ -58,7 +58,7 @@ export default {
           left: 20,
           right: 20,
           bottom: 20,
-          containLabel: true //轴上的数值
+          containLabel: true // 是否包含轴上的数值
         },
         xAxis: {
           type: 'category',

@@ -57,16 +57,16 @@ export default {
       option: null,
       arrData: [{
         post: '红色地标典范',
-        number: 158
+        number: 308
       }, {
         post: '红色文化高地',
-        number: 572
+        number: 255
       }, {
         post: '红色记忆驿站',
-        number: 826
+        number: 181
       }, {
         post: '红色星火传承点',
-        number: 66
+        number: 124
       }],
       color: ['#45fed4', '#84a9ef', '#f1e04f', '#dbfe73'],
       totalNum: [],

@@ -17,33 +17,33 @@
             </div>
             <div class="count_div">
                 <div class="title">注册用户数</div>
-                <dv-digital-flop :config="config" style="width:200px;height:50px;" />
+                <dv-digital-flop :config="config2" style="width:200px;height:50px;" />
             </div>
             <!-- 利润 -->
             <div class="count_div">
                 <div class="title">平台净利润</div>
-                <dv-digital-flop :config="config" style="width:200px;height:50px;" />
+                <dv-digital-flop :config="config3" style="width:200px;height:50px;" />
             </div>
             <div class="count_div">
                 <div class="title">投资回报率</div>
-                <dv-digital-flop :config="config" style="width:200px;height:50px;" />
+                <dv-digital-flop :config="config4" style="width:200px;height:50px;" />
             </div>
             <!-- 资源调度 -->
             <div class="count_div">
                 <div class="title">平均资源利用率</div>
-                <dv-digital-flop :config="config" style="width:200px;height:50px;" />
+                <dv-digital-flop :config="config5" style="width:200px;height:50px;" />
             </div>
             <div class="count_div">
                 <div class="title">资源分配情况</div>
-                <dv-digital-flop :config="config" style="width:200px;height:50px;" />
+                <dv-digital-flop :config="config6" style="width:200px;height:50px;" />
             </div>
             <div class="count_div">
                 <div class="title">负载均衡</div>
-                <dv-digital-flop :config="config" style="width:200px;height:50px;" />
+                <dv-digital-flop :config="config7" style="width:200px;height:50px;" />
             </div>
             <div class="count_div">
                 <div class="title">资源需求预测</div>
-                <dv-digital-flop :config="config" style="width:200px;height:50px;" />
+                <dv-digital-flop :config="config8" style="width:200px;height:50px;" />
             </div>
         </div>
     </dv-border-box-12>
@@ -54,9 +54,36 @@ export default {
     data() {
         return {
             config: {
-                number: [100],
-                content: '{nt}个'
-            }
+                number: [868],
+                // content: '{nt}个'
+            },
+            config2:{
+                number: [64583],
+            },
+            config3:{
+                number: [75843],
+                content: '{nt}w'
+            },
+            config4:{
+                number: [87],
+                content: '{nt}%'
+            },
+            config5:{
+                number: [98],
+                content: '{nt}%'
+            },
+            config6:{
+                // number: [64583],
+                content: '正常'
+            },
+            config7:{
+                // number: [64583],
+                content: '正常'
+            },
+            config8:{
+                // number: [64583],
+                content: '较好'
+            },
         }
     },
 }
@@ -82,15 +109,14 @@ export default {
     }
 
     .border-box {
-        width: 80%;
+        width: 100%;
         height: 200px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
         align-items: center;
-
         .count_div {
-            width: 23%;
+            width: 24%;
             height: 90px;
             background-color: #282c34;
             border-radius: 4px;
